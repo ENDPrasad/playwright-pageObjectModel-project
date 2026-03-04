@@ -54,6 +54,8 @@ test.describe("E-commerce site test", () => {
       await Cart.removeItem();
       // Check whether item got removed or not
       await Cart.removedItemStatus();
+
+      throw Error("My temporary error");
     });
 
     await test.step("Go to check out page", async () => {
